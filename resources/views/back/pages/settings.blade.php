@@ -66,7 +66,7 @@
 
             </div>
             <div class="tab-pane fade" id="tabs-activity-8" role="tabpanel">
-
+                @livewire('author-blog-social-media-form')
             </div>
         </div>
     </div>

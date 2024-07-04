@@ -70,7 +70,7 @@
 > 10 :  Blog Administration  - Change Profile Picture
 
 - public\back\dist\image\authors    `default-img.png` `AIMG1171896834756899.jpg`
-- app\Models   `User.php`  
+- app\Modelss   `User.php`  
 - resources\views\livewire    `author-profile-header.blade.php`   `top-header.blade.php`
 - public\back\dist\image\libs\ijaboCropTools    `ijaboCropTool.min.css`    `ijaboCropTool.min.js`
 - resources\views\back\layouts    `pages-layout.blade.php`
@@ -95,7 +95,7 @@
 - public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_logo.png`
 - resources\views\back\layouts    `pages-layout.blade.php`
 - resources\views\back\pages    `settings.blade.php`
-- app\model    `Setting.php` 
+- app\Models    `Setting.php` 
 - routes    `author.php`
 - app\Http\Controllers    `AuthorController.php`
 - resources\views\livewire    `top-header.blade.php`
@@ -104,12 +104,19 @@
 > 14 : Blog Administration  - Blog favicon 
 - resources\views\back\pages    `settings.blade.php`
 - routes    `author.php`
-- app\model    `Setting.php` 
+- app\Models    `Setting.php` 
 - resources\views\back\layouts    `pages-layout.blade.php`    `auth-layout.blade.php`
 - app\Http\Controllers    `AuthorController.php`
 - public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_favicon.ico`
 
 > 15 : Blog Administration  - Blog logo & favicon - Unify changeBlogLogo changeBlogFavicon into changeBlogPic
- - resources\views\back\pages    `settings.blade.php`
+- resources\views\back\pages    `settings.blade.php`
 - routes    `author.php`
 - app\Http\Controllers    `AuthorController.php`
+
+> 16 : Blog Administration  - Social Media  - Example of Try-Catch
+- resources\views\back\pages    `settings.blade.php`
+- app\Models    `BlogSocialMedia.php` 
+- database\migrations   `YYYY_MM_DD_hhmmss_create_blog_social_media_table.php`
+- app\Livewire    `AuthorBlogSocialMediaForm.php`
+- resources\views\livewire    `author-blog-social-media-form.blade.php`
