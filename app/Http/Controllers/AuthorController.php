@@ -62,7 +62,7 @@ class AuthorController extends Controller
        
         $settings = Setting::find(1);
         $old_pic = $settings->getAttributes()[$whatPic];
-        $filename = time().'_'.rand(1,100000).'_lara'.$whatPic.$extension;
+        $filename = time().'_'.rand(1,100000).'_lara'.$whatPic.'.'.$extension;
 
         if ($request->hasFile($whatPic)) {
             if ($old_pic != null && File::exists(public_path($pic_path.$old_pic)) ) {

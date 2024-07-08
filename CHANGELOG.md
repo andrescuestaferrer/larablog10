@@ -120,3 +120,11 @@
 - database\migrations   `YYYY_MM_DD_hhmmss_create_blog_social_media_table.php`
 - app\Livewire    `AuthorBlogSocialMediaForm.php`
 - resources\views\livewire    `author-blog-social-media-form.blade.php`
+
+> 17 : After Crash of MySQL : phpMyAdmin => cannot connect : invalid settings. misqli_real_connect() (HY000/1130) Host localhost is not allowed to connect to this  MariaDB server
+=> Solution : Reinstall XAMP, create new database and import backup
+- 17.1 : Regenerate blog logo + icon + favicon
+- public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_favicon.ico`
+- public\back\dist\image\authors   `AIMGXXXXXXXXXXXXXXXXX.jpg
+- 17.1.bis : Correct the lack of extension in logo and icon 
+- app\Http\Controllers    `AuthorController.php`
