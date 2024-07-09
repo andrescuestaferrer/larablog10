@@ -125,6 +125,10 @@
 => Solution : Reinstall XAMP, create new database and import backup
 - 17.1 : Regenerate blog logo + icon + favicon
 - public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_favicon.ico`
-- public\back\dist\image\authors   `AIMGXXXXXXXXXXXXXXXXX.jpg
+- public\back\dist\image\authors   `AIMGXXXXXXXXXXXXXXXXX.jpg`
 - 17.1.bis : Correct the lack of extension in logo and icon 
 - app\Http\Controllers    `AuthorController.php`
+
+> 18 : Blog routing - After login redirection
+- app\Http\Middleware    `Authenticate.php`(./app/Http/Middleware/Authenticate.php)
+- app\Livewire   `AuthorLoginForm.php`(./app/Livewire/AuthorLoginForm.php)

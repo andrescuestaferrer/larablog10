@@ -35,6 +35,11 @@ class UserCaseSensitive implements Rule
 class AuthorLoginForm extends Component
 {
     public $login_id, $password, $username; 
+    public $returnUrl;
+
+    public function mount() {
+        $this->returnUrl = request()->returnUrl;
+    }
 
     public function LoginHandler() {
         $this->username = $this->login_id;
@@ -71,7 +76,11 @@ class AuthorLoginForm extends Component
                 Auth::guard('web')->logout();
                 return redirect()->route('author.login')->with('fail', 'Your account has been blocked.');
             } else {
-                return redirect()->route('author.home');
+                if ($this->returnUrl != null) {
+                    return redirect()->to($this->returnUrl);
+                } else {
+                    return redirect()->route('author.home');
+                }
             }
         } else {
             session()->flash('fail', 'Incorrect email/username or password');
