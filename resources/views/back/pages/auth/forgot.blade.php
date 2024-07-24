@@ -1,5 +1,5 @@
 @extends('back.layouts.auth-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Forgot password')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : __('Forgot password') )
 @section('content')
 
     <div class="page page-center">
@@ -9,9 +9,9 @@
         </div>
         @livewire('author-forgot-form')
         <div class="text-center text-muted mt-3">
-          Forget it, <a href="{{ route('author.login') }}">send me back</a> to the sign in screen.
+          {{ __('Forget it,') }} <a href="{{ route('author.login') }}">{{ __('send me back') }}</a> {{ __('to the sign in screen.') }}
         </div>
       </div>
     </div>
 
-@endsectiona
+@endsection

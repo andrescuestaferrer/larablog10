@@ -1,5 +1,5 @@
 @extends('back.layouts.auth-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Login')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : __('Login') )
 @section('content')
 
     <div class="page page-center">

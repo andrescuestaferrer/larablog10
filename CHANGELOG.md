@@ -130,5 +130,42 @@
 - app\Http\Controllers    `AuthorController.php`
 
 > 18 : Blog routing - After login redirection
-- app\Http\Middleware    `Authenticate.php`(./app/Http/Middleware/Authenticate.php)
-- app\Livewire   `AuthorLoginForm.php`(./app/Livewire/AuthorLoginForm.php)
+- app\Http\Middleware    [`Authenticate.php`](./app/Http/Middleware/Authenticate.php)
+- app\Livewire   [`AuthorLoginForm.php`](./app/Livewire/AuthorLoginForm.php)
+
+> 19 : Blog Localization - php artisan lang:publish
+
+>>  19.1 TRANSLATION Files
+
+- lang\en    [`auth.php`](./lang/en/auth.php)    [`pagination.php`](./lang/en/pagination.php)    [`passwords.php`](./lang/en/passwords.php)    [`validation.php`](./lang/en/validation.php)
+- lang    [`es.json`](./lang/es.json)    [`fr.json`](./lang/fr.json)
+
+>> 19.2 App CONFIGURATION - locales
+
+- config    [`app.php`](./config/app.php "available locales")
+
+>> 19.3 App Middleware - php artisan make:middleware Localization
+
+- routes    [`web.php`](./routes/web.php)
+- app/Http/Kernel        [`Kernel.php`](./app/Http/Kernel.php)
+- app/Http/Middleware    [`Localization.php`](./app/Http/Middleware/Localization.php)
+
+>> 19.4 SWITCHER: VIEW
+
+- resources\views\back\layouts\inc     [`lang-switcher.blade.php`](./resources/views/back/layouts/inc/lang-switcher.blade.php)
+
+>> 19.5 VIEWS TO INCLUDE SWITCHER
+
+- resources\views\back\layouts     [`auth-layout.blade.php`](./resources/views/back/layouts/auth-layout.blade.php)
+- resources\views\livewire     [`top-header.blade.php`](./resources/views/livewire/top-header.blade.php) 
+
+>> 19.6 VIEWS TO TRANSLATE TEXTS
+
+- resources\views\back\pages\auth     [`login.blade.php`](./resources/views/back/pages/auth/login.blade.php)
+- resources\views\back\pages\auth     [`forgot.blade.php`](./resources/views/back/pages/auth/forgot.blade.php)
+- resources\views\back\pages\auth     [`reset.blade.php`](./resources/views/back/pages/auth/reset.blade.php)
+- resources\views\livewire            [`author-login-form`](./resources/views/livewire/author-login-form.blade.php)
+- resources\views\livewire            [`author-forgot-form`](./resources/views/livewire/author-forgot-form.blade.php)
+- resources\views\livewire            [`author-reset-form`](./resources/views/livewire/author-reset-form.blade.php)
+- resources\views\livewire            [`author-change-password-form`](./resources/views/livewire/author-change-password-form.blade.php)
+- resources\views\back\pages     [`home.blade.php`](./resources/views/back/pages/home.blade.php) 
