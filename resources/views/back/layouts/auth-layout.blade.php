@@ -23,6 +23,7 @@
     @stack('stylesheets')
     @livewireStyles
     <link href="./back/dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <link href="./back/dist/css/styles.css" rel="stylesheet"/>
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -33,7 +34,7 @@
       }
     </style>
   </head>
-  <body  class=" d-flex flex-column">
+  <body  class="d-flex flex-column background_item">
 
     @include('back.layouts.inc.lang-switcher')
     

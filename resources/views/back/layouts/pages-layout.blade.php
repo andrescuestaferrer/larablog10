@@ -25,6 +25,7 @@
     @stack('stylesheets')
     @livewireStyles
     <link href="./back/dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <link href="./back/dist/css/styles.css" rel="stylesheet"/>
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -35,7 +36,7 @@
       }
     </style>
   </head>
-  <body >
+  <body class="background_item" >
     <script src="./back/dist/js/demo-theme.min.js?1684106062"></script>
     <div class="page">
       @include('back.layouts.inc.header')

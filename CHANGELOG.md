@@ -169,3 +169,9 @@
 - resources\views\livewire            [`author-reset-form`](./resources/views/livewire/author-reset-form.blade.php)
 - resources\views\livewire            [`author-change-password-form`](./resources/views/livewire/author-change-password-form.blade.php)
 - resources\views\back\pages     [`home.blade.php`](./resources/views/back/pages/home.blade.php) 
+
+> 20: Include own styles.css
+
+- public\back\dist\css     [`styles.css`](./public/back/dist/css/styles.css)
+- resources\views\back\layouts     [`auth-layout.blade.php`](./resources/views/back/layouts/auth-layout.blade.php)
+- resources\views\back\layouts     [`pages-layout.blade.php`](./resources/views/back/layouts/pages-layout.blade.php)
