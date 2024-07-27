@@ -175,3 +175,9 @@
 - public\back\dist\css     [`styles.css`](./public/back/dist/css/styles.css)
 - resources\views\back\layouts     [`auth-layout.blade.php`](./resources/views/back/layouts/auth-layout.blade.php)
 - resources\views\back\layouts     [`pages-layout.blade.php`](./resources/views/back/layouts/pages-layout.blade.php)
+
+> 21: Toggle password by eye
+
+- resources\views\back\layouts     [`auth-layout.blade.php`](./resources/views/back/layouts/auth-layout.blade.php)
+- resources\views\livewire            [`author-login-form`](./resources/views/livewire/author-login-form.blade.php)
+- resources\views\livewire            [`author-reset-form`](./resources/views/livewire/author-reset-form.blade.php)

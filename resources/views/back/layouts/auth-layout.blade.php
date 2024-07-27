@@ -24,6 +24,7 @@
     @livewireStyles
     <link href="./back/dist/css/demo.min.css?1684106062" rel="stylesheet"/>
     <link href="./back/dist/css/styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
