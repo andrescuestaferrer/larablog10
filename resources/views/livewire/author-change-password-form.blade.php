@@ -26,6 +26,6 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Change password</button>
+        <button type="submit" class="btn btn-primary">{{ __('Change password') }}</button>
     </form>   
 </div>

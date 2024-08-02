@@ -191,6 +191,7 @@
 - resources\views\livewire      [`author-reset-form.blade.php`](./resources/views/livewire/author-reset-form.blade.php)
 
 >> 22.2 Add Author to blog
+
 - resources\views\livewire     [`top-header.blade.php`](./resources/views/livewire/top-header.blade.php) 
 - lang    [`es.json`](./lang/es.json)    [`fr.json`](./lang/fr.json)
 - routes  [`author.php`](./routes/author.php)
@@ -198,3 +199,10 @@
 - CLASS: app\Livewire\Authors.php    [`Authors.php`](./app/Livewire/Authors.php)
 - VIEW: resources\views\livewire     [`authors.blade.php`](./resources/views/livewire)
 - resources\views     [`new-author-email-template.blade.php`](./resources/views/new-author-email-template.blade.php) 
+
+> 23:  Translate Profile Page
+
+- resources\views\back\pages     [`profile.blade.php`](./resources/views/back/pages/profile.blade.php)
+- lang    [`es.json`](./lang/es.json)    [`fr.json`](./lang/fr.json)
+- resources\views\livewire     [`author-profile-header.blade.php`](./resources/views/livewire/author-profile-header.blade.php) 
+- resources\views\livewire     [`author-change-password-form.blade.php`](./resources/views/livewire/author-change-password-form.blade.php) 
