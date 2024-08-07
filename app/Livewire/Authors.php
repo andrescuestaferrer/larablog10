@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Nette\Utils\Random;
 use Illuminate\Support\Facades\Mail;
-
+use Livewire\WithPagination;
 
 if ( !defined('__PUBLIC__') )  define('__PUBLIC__',$_SERVER['DOCUMENT_ROOT']);
 require_once(__PUBLIC__.'/traits/CommonFunctions.php');
@@ -17,18 +17,40 @@ class Authors extends Component
 {
     // traits
     use CommonFunctions;
+    use WithPagination;
+
+    protected $paginationTheme = 'bootstrap';
 
     public $name, $email, $username, $author_type, $direct_publish ;
+    public $search;
+    public $perPage = 4;
 
     protected $listeners = [
         'resetForms',
     ] ;
+
+    public function mount() {
+        $this->resetPage();
+    }
+
+    public function updatingSearch() {
+        $this->resetPage();
+    }
 
     public function resetForms() {
         $this->name = $this->email = $this->username  = $this->author_type = $this->direct_publish = null ;
         $this->resetErrorBag();
     }
 
+    public function render()
+    {
+        // echo "render".$this->search;
+        return view('livewire.authors',[
+            'authors' => User::search(trim($this->search))
+                 ->where('id','!=', auth()->id())->paginate($this->perPage),
+        ]);
+    }
+    
     public function isOnline($site ="https://youtube.com/") {
         if (@fopen($site, "r")) {
             return true;
@@ -105,10 +127,4 @@ class Authors extends Component
 
     }
 
-    public function render()
-    {
-        return view('livewire.authors',[
-            'authors'=>User::where('id','!=', auth()->id())->get(),
-        ]);
-    }
 }

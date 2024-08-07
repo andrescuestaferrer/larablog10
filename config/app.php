@@ -111,6 +111,16 @@ return [
         'French' => 'fr',
     ],
 
+    /*  Using bootsrap5 flags : see https://github.com/lipis/flag-icons?tab=readme-ov-file 
+        Codes for flags are ISO 3166-1-alpha-2 : see in https://www.iso.org/obp/ui/#search
+        The keys of available_flags array are the values of available_locales array
+    */
+    'available_flags' => [
+        'en' => 'gb',
+        'es' => 'es',
+        'fr' => 'fr',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Faker Locale

@@ -51,7 +51,7 @@
 - resources/views/back/layouts/inc    [`header.blade.php`](./resources/views/back/layouts/inc/header.blade.php)
 - resources/views/back/pages    [`profile.blade.php`](./resources/views/back/pages/profile.blad)
 - app/Livewire   [`TopHeader.php`](./profile.blad/TopHeader.php)  [`AuthorProfileHeader.php`](./app/Livewire/AuthorProfileHeader.php)   [`AuthorPersonalDetails.php`](./app/Livewire/AuthorPersonalDetails.php)
-- resources/views/livewire    [`top-header.blade.php`](./resources/views/livewire/top-header.blade.php)    [`author-profile-header.blade.php`  `](./routes/)author-personal-details.blade.php`
+- resources/views/livewire    [`top-header.blade.php`](./resources/views/livewire/top-header.blade.php)    [`author-profile-header.blade.php`](./resources/views/livewire/author-personal-details.blade.php`)
 
 > 8 : Integrate jQuery Toast Messages with traits implemented in Commonfunctions.php
 
@@ -92,7 +92,7 @@
 
 > 13 : Blog Administration  - Blog Logo
 - public/back/dist/libs/ijaboViewer    [`jquery.ijaboViewer.min.js`](./public/back/dist/libs/ijaboViewer/jquery.ijaboViewer.min.js)
-- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_logo.png`](./public/back/dist/image/.)
+- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_logo.png`](./public/back/dist/image/)
 - resources/views/back/layouts    [`pages-layout.blade.php`](./resources/views/back/layouts/pages-layout.blade.php)
 - resources/views/back/pages    [`settings.blade.php`](./resources/views/back/pages/settings.blade.php)
 - app/Models    [`Setting.php`](./app/Models/Setting.php)
@@ -107,7 +107,7 @@
 - app/Models    [`Setting.php`](./app/Models/Setting.php)
 - resources/views/back/layouts    [`pages-layout.blade.php`](./resources/views/back/layouts/pages-layout.blade.php)    [`resources/views/back/layouts`](./resources/views/back/layouts/resources/views/back/layouts)
 - app/Http/Controllers    [`AuthorController.php`](./app/Http/Controllers/AuthorController.php)
-- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_favicon.ico`](./public/back/dist/image/logo-favicon/.)
+- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_favicon.ico`](./public/back/dist/image/logo-favicon/)
 
 > 15 : Blog Administration  - Blog logo & favicon - Unify changeBlogLogo changeBlogFavicon into changeBlogPic
 - resources/views/back/pages    [`settings.blade.php`](./resources/views/back/pages/settings.blade.php)
@@ -117,7 +117,7 @@
 > 16 : Blog Administration  - Social Media  - Example of Try-Catch
 - resources/views/back/pages    [`settings.blade.php`](./resources/views/back/pages/settings.blade.php)
 - app/Models    [`BlogSocialMedia.php`](./app/Models/BlogSocialMedia.php)
-- database/migrations   [`YYYY_MM_DD_hhmmss_create_blog_social_media_table.php`](./database/migrations/.)
+- database/migrations   [`YYYY_MM_DD_hhmmss_create_blog_social_media_table.php`](./database/migrations/)
 - app/Livewire    [`AuthorBlogSocialMediaForm.php`](./app/Livewire/AuthorBlogSocialMediaForm.php)
 - resources/views/livewire    [`author-blog-social-media-form.blade.php`](./resources/views/livewire/author-blog-social-media-form.blade.php)
 
@@ -127,8 +127,8 @@
 
 >> 17.1 : Regenerate blog logo + icon + favicon
 
-- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_favicon.ico`](./public/back/dist/image/logo-favicon/.)
-- public/back/dist/image/authors   [`AIMGXXXXXXXXXXXXXXXXX.jpg`](./public/back/dist/image/authors/.)
+- public/back/dist/image/logo-favicon   [`xxxxxxxxxx_xxxxx_larablog_favicon.ico`](./public/back/dist/image/logo-favicon/)
+- public/back/dist/image/authors   [`AIMGXXXXXXXXXXXXXXXXX.jpg`](./public/back/dist/image/authors/)
 
 >>  17.1.bis : Correct the lack of extension in logo and icon
 
@@ -202,8 +202,8 @@
 - lang    [`es.json`](./lang/es.json)    [`fr.json`](./lang/fr.json)
 - routes  [`author.php`](./routes/author.php)
 - resources/views/back/pages      [`authors.blade.php`](./resources/views/back/pages/authors.php)
-- CLASS: app/Livewire/Authors.php    [`Authors.php`](./app/Livewire/Authors.php)
-- VIEW: resources/views/livewire     [`authors.blade.php`](./resources/views/livewire)
+- CLASS: app/Livewire/    [`Authors.php`](./app/Livewire/Authors.php)
+- VIEW: resources/views/livewire     [`authors.blade.php`](./resources/views/livewire/authors.blade.php)
 - resources/views     [`new-author-email-template.blade.php`](./resources/views/new-author-email-template.blade.php)
 
 > 23:  Translate Profile Page
@@ -216,3 +216,14 @@
 > 24: Amend markdown file : include all links using a macro from multiedit editor
 
 - CHANGELOG.md    [`CHANGELOG.md`](./CHANGELOG.md)
+
+> 25: Search and paginate authors and add a flag to language switcher
+
+- app/Livewire    [`Authors.php`](./app/Livewire/Authors.php)
+- app/Http/Middleware     [`Authenticate.php`](.app/Http/Middleware/Authenticate.php)
+- resources/views/livewire     [`authors.blade.php`](./resources/views/livewire/authors.blade.php)   [`top-header.blade.php`](./resources/views/livewire/top-header.blade.php) 
+- app/Models   [`User.php`](./app/Models/User.php)
+- config    [`app.php`](./config/app.php)
+- lang    [`es.json`](./lang/es.json)    [`fr.json`](./lang/fr.json)
+- resources/views/back/layouts      [`auth-layout.blade.php`](./resources/views/back/layouts/auth-layout.blade.php)    [`pages-layout.blade.php`](./resources/views/back/layouts/pages-layout.blade.php)    
+- resources/views/back/layouts/inc     [`lang-switcher.blade.php`](./resources/views/back/layouts/inc/lang-switcher.blade.php)

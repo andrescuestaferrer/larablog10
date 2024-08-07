@@ -26,6 +26,8 @@
     @livewireStyles
     <link href="./back/dist/css/demo.min.css?1684106062" rel="stylesheet"/>
     <link href="./back/dist/css/styles.css" rel="stylesheet"/>
+        <!-- GET FROM https://github.com/lipis/flag-icons -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {

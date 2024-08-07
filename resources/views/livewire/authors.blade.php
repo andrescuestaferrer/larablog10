@@ -1,25 +1,33 @@
 <div>
-{{-- Close your eyes. Count to one. That is how long forever feels. --}}
-
     <div class="page-header d-print-none mb-2">
-        <div class="container-xl">
-        <div class="row g-2 align-items-center">
-            <div class="col">
-            <h2 class="page-title">{{ __('Authors') }}</h2>
-
+        <div class="container-xl p-3">
+        <div class="row g-4 align-items-center">
+            <div class="col md-4">
+                <div class="d-flex">
+                    <label for="perPage" style="padding: 10px;">{{ __('Results per page') }}:</label>
+                    <input type="number" id="perPage" placeholder="{{ __('Per page...') }}" style="width: 2.7em;height: 2em; font-size: 1.3em;" min="1" max="25" wire:model.live='perPage'>
+                </div>
             </div>
-            <!-- Page title actions -->
-            <div class="col-auto ms-auto d-print-none">
-            <div class="d-flex">
-                <input type="search" class="form-control d-inline-block w-9 me-3" placeholder="Search user…" wire:model='search'>
-                <a href="#" class="btn btn-primary" data-bs-target="#add_author_modal" data-bs-toggle="modal" >
-                <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
-                {{ __('New Author') }}
-                </a>
-            </div>
+            <div class="col md-8">
+                {{ $authors->links() }}
+                {{-- $authors->links('livewire::simple-bootstrap') --}}
             </div>
         </div>
+        <div class="row g-10 align-items-center" >
+            <!-- Page title actions -->
+            <div class="col-auto">
+                <h2 class="page-title">{{ __('Authors') }}</h2>
+            </div>
+            <div class="col-auto ms-auto d-print-none" >
+                <div class="d-flex">
+                    <input type="search" class="form-control d-inline-block w-9 me-3"  placeholder="{{ __('Filter user...') }}" wire:model.live='search'>
+                    <a href="#" class="btn btn-primary" data-bs-target="#add_author_modal" data-bs-toggle="modal" >
+                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
+                        {{ __('New Author') }}
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
